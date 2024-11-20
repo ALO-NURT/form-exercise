@@ -14,7 +14,7 @@ data class StudentService(
     }
 
     fun getAllStudents(): List<Student> {
-        return studentMap.values.toList()
+        return studentMap.values.toList().sortedBy { it.email }
     }
 
     fun removeStudent(email: String) {
