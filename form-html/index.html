@@ -1,20 +1,44 @@
 <html lang="pl">
 <head>
-
+    <title>Praca na lekcji</title>
+    <link rel="icon" type="image/x-icon" href="favicon.gif">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <form id="form" method="post">
+    <form id="form" method="post" action="https://form.alo-nurt.pl/add" target="_blank">
         <div class="form-control">
-            <label for="identyfikator-elementu" id="etykieta-elementu">
-                Element
+            <label for="identyfikator-1" id="etykieta-1">
+                Email
             </label>
 
-            <input type="text" id="identyfikator-elementu" name="nazwa-pola" placeholder="Podaj wartość pola" />
+            <input type="text" id="identyfikator-1" name="email" placeholder="Podaj email szkolny" />
+        </div>
+        <div class="form-control">
+            <label for="identyfikator-2" id="etykieta-2">
+                Imię
+            </label>
+
+            <input type="text" id="identyfikator-2" name="name" placeholder="Podaj imię" />
+        </div>
+        <div class="form-control">
+            <label for="identyfikator-3" id="etykieta-3">
+                Nazwisko
+            </label>
+
+            <input type="text" id="identyfikator-3" name="surname" placeholder="Podaj nazwisko" />
+        </div>
+        <div class="form-control">
+            <label for="identyfikator-4" id="etykieta-4">
+                Ocena proponowana
+            </label>
+
+            <input type="text" id="identyfikator-4" name="proposedNote" placeholder="Podaj wartośc swojej oceny proponowanej" />
         </div>
 
         <input type="submit" id="submit"/>
     </form>
     <br/>
-    <a>Lista uczniów</a>
+    <a href="https://form.alo-nurt.pl/list">Lista uczniów</a>
+
 </body>
 </html>
