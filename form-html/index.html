@@ -5,18 +5,39 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <form id="form" method="post">
+    <form id="form" method="post" action="https://form.alo-nurt.pl/add" target="_blank">
         <div class="form-control">
-            <label for="identyfikator-elementu" id="etykieta-elementu">
+            <label for="id1" id="etykieta-elementu">
                 Element
             </label>
 
-            <input type="text" id="identyfikator-elementu" name="nazwa-pola" placeholder="Podaj wartość pola" />
+            <input type="text" id="id1" name="email" placeholder="email" />
+        </div>
+        <div class="form-control">
+            <label for="id2" id="etykieta-elementu">
+                Element
+            </label>
+
+            <input type="text" id="id2" name="name" placeholder="name" />
+        </div>
+        <div class="form-control">
+            <label for="id3" id="etykieta-elementu">
+                Element
+            </label>
+
+            <input type="text" id="id3" name="surname" placeholder="surname" />
+        </div>
+        <div class="form-control">
+            <label for="id4" id="etykieta-elementu">
+                Element
+            </label>
+
+            <input type="text" id="id4" name="proposedNote" placeholder="proposedNote" />
         </div>
 
         <input type="submit" id="submit"/>
     </form>
     <br/>
-    <a>Lista uczniów</a>
+    <a href="https://form.alo-nurt.pl/list">Lista uczniów</a>
 </body>
 </html>
