@@ -10,14 +10,14 @@ data class StudentService(
 
 ) {
     fun addStudent(student: Student) {
-        studentMap[student.email] = student
+        studentMap[student.email.lowercase()] = student
     }
 
     fun getAllStudents(): List<Student> {
-        return studentMap.values.toList().sortedBy { it.email }
+        return studentMap.values.toList().sortedBy { it.email.lowercase() }
     }
 
     fun removeStudent(email: String) {
-        studentMap.remove(email)
+        studentMap.remove(email.lowercase())
     }
 }
