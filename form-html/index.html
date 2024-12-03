@@ -3,37 +3,31 @@
    <title> Praca na lekcji </title>
    <link rel="stylesheet" href="styles.css">
    <link rel="icon" href="favicon.gif" type="image/gif">
-   <form action="https://form.alo-nurt.pl/add" method="post" target="_blank"></form>
-   <form action="https://form.alo-nurt.pl/add" method="POST" target="_blank">
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-  
-    <label for="name">Imię:</label>
-    <input type="text" id="name" name="name" required>
-  
-    <label for="surname">Nazwisko:</label>
-    <input type="text" id="surname" name="surname" required>
-  
-    <label for="proposedNote">Proponowana ocena:</label>
-    <input type="text" id="proposedNote" name="proposedNote" required>
-    <a href="https://form.alo-nurt.pl/list" target="_blank">Zobacz listę ocen</a>
-  
-    <button type="submit">Wyślij</button>
+   
   </form>
 </head>
 <body>
-    <form id="form" method="post">
-        <div class="form-control">
-            <label for="identyfikator-elementu" id="etykieta-elementu">
-                Element
-            </label>
-
-            <input type="text" id="identyfikator-elementu" name="nazwa-pola" placeholder="Podaj wartość pola" />
-        </div>
-
-        <input type="submit" id="submit"/>
-    </form>
-    <br/>
-    <a>Lista uczniów</a>
+    <form action="https://form.alo-nurt.pl/add" method="POST" target="_blank">
+     <label for="email">Email:</label>
+     <input type="email" id="email" name="email" required>
+   
+     <label for="name">Imię:</label>
+     <input type="text" id="name" name="name" required>
+   
+     <label for="surname">Nazwisko:</label>
+     <input type="text" id="surname" name="surname" required>
+   
+     <label for="proposedNote">Proponowana ocena:</label>
+     <select id="proposedNote" name="proposedNote" required>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+     <a href="https://form.alo-nurt.pl/list" target="_blank">Zobacz listę ocen</a>
+   
+     <button type="submit">Wyślij</button> 
 </body>
 </html>
