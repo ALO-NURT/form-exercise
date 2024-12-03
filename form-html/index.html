@@ -1,36 +1,63 @@
 <html lang="pl">
 <head>
-    <title>Praca na lekcji</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="favicon.gif" type="image/gif">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Praca na lekcji</title>
+   <link rel="stylesheet" href="styles.css">
+   <link rel="icon" href="favicon.gif" type="image/gif" alt="Ikona strony">
+   <style>
+      /* Styl dla formularza, aby każdy element był w osobnej linii */
+      form {
+         width: 300px;
+         margin: 0 auto;
+      }
 
+      label,
+      input,
+      select,
+      button {
+         display: block;  /* Ustawia każdy element formularza w nowej linii */
+         margin-bottom: 10px;  /* Daje odstęp między elementami */
+         width: 100%;
+      }
 
+      button {
+         width: auto; /* Przycisk nie musi mieć pełnej szerokości */
+      }
+
+      a {
+         display: inline-block;
+         margin-top: 10px; /* Odstęp między linkiem a przyciskiem */
+      }
+   </style>
 </head>
 <body>
-    <form id="https://form.alo-nurt.pl/add" method="post" target="_blank">
-        <div class="form-control">
-            <label for="identyfikator-elementu" id="etykieta-elementu">
-                Element
-            </label>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="name">Imię:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="surname">Nazwisko:</label>
-            <input type="text" id="surname" name="surname" required>
-            
-            <label for="proposedNote">Proponowana ocena:</label>
-            <input type="number" id="proposedNote" name="proposedNote" required>
-            
-            <input type="text" id="identyfikator-elementu" name="nazwa-pola" placeholder="Podaj wartość pola" />
-        </div>
+    <form action="https://form.alo-nurt.pl/add" method="POST" target="_blank">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+   
+        <label for="name">Imię:</label>
+        <input type="text" id="name" name="name" required>
+   
+        <label for="surname">Nazwisko:</label>
+        <input type="text" id="surname" name="surname" required>
+   
+        <label for="proposedNote">Proponowana ocena:</label>
+        <select id="proposedNote" name="proposedNote" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select>
 
-        <input type="submit" id="submit"/>
+        <a href="https://form.alo-nurt.pl/list" target="_blank">Zobacz listę ocen</a>
+
+        <button type="submit">Wyślij</button>
     </form>
-    <br/>
-    <a href="https://form.alo-nurt.pl/list" target="_blank">Zobacz listę zgłoszeń</a>
-
 </body>
 </html>
+
+
+
