@@ -1,23 +1,47 @@
 <html lang="pl">
-<head> 
-    <title> Praca na lekcji </title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="favicon.gif" type="image/gif">
-
+<head>
+    <title>Praca na lekcji</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/gif" href="favicon.gif">
 </head>
+ 
 <body>
-    <form id="form" method="post">
+    <form action="https://form.alo-nurt.pl/add" id="form" method="post" target="_blank">
         <div class="form-control">
             <label for="identyfikator-elementu" id="etykieta-elementu">
-                Element
+                Email
             </label>
-
-            <input type="text" id="identyfikator-elementu" name="nazwa-pola" placeholder="Podaj wartość pola" />
+ 
+            <input type="text" id="identyfikator-elementu-1" name="email" placeholder="Podaj Email" />
         </div>
-
+ 
+        <div class="form-control">
+            <label for="identyfikator-elementu" id="etykieta-elementu">
+                Imię
+            </label>
+ 
+            <input type="text" id="identyfikator-elementu-2" name="name" placeholder="Podaj imię" />
+        </div>
+ 
+        <div class="form-control">
+            <label for="identyfikator-elementu" id="etykieta-elementu">
+                Nazwisko
+            </label>
+ 
+            <input type="text" id="identyfikator-elementu-3" name="surname" placeholder="Podaj nazwisko" />
+        </div>
+ 
+        <div class="form-control">
+            <label for="identyfikator-elementu" id="etykieta-elementu">
+                Proponowana ocena
+            </label>
+ 
+            <input type="text" id="identyfikator-elementu-4" name="proposedNote" placeholder="Podaj proponowaną ocenę" />
+        </div>
+ 
         <input type="submit" id="submit"/>
     </form>
     <br/>
-    <a>Lista uczniów</a>
-</body>
-</html>
+    <a href="https://form.alo-nurt.pl/list" target="_blank">Lista uczniów</a>
+
+ 
