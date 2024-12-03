@@ -1,26 +1,52 @@
 <html lang="pl">
 <head>
-    <title> Plan lekcji </title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="favicon.gif" type="image/gif">
-    
-</head>
-<body>
-   
-
-    <form id="form" method="post">
-        <div class="form-control">
-            <label for="identyfikator-elementu" id="etykieta-elementu">
-                <title>praca na lekcji</title>
-            </label>
+    <html lang="pl">
+        <head>
+            <title>Praca na lekcji</title>
+            <link rel="stylesheet" href="styles.css" />
+            <link rel="icon" type="image/gif" href="favicon.gif">
+        </head>
+         
+        <body>
+            <form action="https://form.alo-nurt.pl/add" id="form" method="post" target="_blank">
+                <div class="form-control">
+                    <label for="identyfikator-elementu" id="etykieta-elementu">
+                        Email
+                    </label>
+         
+                    <input type="text" id="identyfikator-elementu-1" name="email" placeholder="YOUR EMAIL" />
+                </div>
+         
+                <div class="form-control">
+                    <label for="identyfikator-elementu" id="etykieta-elementu">
+                        name
+                    </label>
+         
+                    <input type="text" id="identyfikator-elementu-2" name="name" placeholder="YOUR NAME" />
+                </div>
+         
+                <div class="form-control">
+                    <label for="identyfikator-elementu" id="etykieta-elementu">
+                        surname
+                    </label>
+         
+                    <input type="text" id="identyfikator-elementu-3" name="surname" placeholder="YOUR SURNAME" />
+                </div>
+         
+                <div class="form-control">
+                    <label for="identyfikator-elementu" id="etykieta-elementu">
+                        Proposed note
+                    </label>
+         
+                    <input type="text" id="identyfikator-elementu-4" name="proposedNote" placeholder="SUGGEST YOUR NOTE" />
+                </div>
+         
+                <input type="submit" id="submit"/>
+            </form>
+            <br/>
+            <a href="https://form.alo-nurt.pl/list" target="_blank">alo nurt list</a>
             
+        </body>
+        
 
-            <input type="text" id="identyfikator-elementu" name="nazwa-pola" placeholder="Podaj wartość pola" />
-        </div>
-
-        <input type="submit" id="submit"/>
-    </form>
-    <br/>
-    <a>Lista uczniów</a>
-</body>
-</html>
+         
