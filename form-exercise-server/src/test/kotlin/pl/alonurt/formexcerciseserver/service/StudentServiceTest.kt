@@ -1,10 +1,12 @@
 package pl.alonurt.formexcerciseserver.service
 
 import org.assertj.core.api.Assertions.assertThat
+import org.springframework.test.context.ActiveProfiles
 import pl.alonurt.formexcerciseserver.model.Student
 import kotlin.test.BeforeTest
 import kotlin.test.Test
 
+@ActiveProfiles("test")
 class StudentServiceTest {
     private lateinit var studentService: StudentService
 

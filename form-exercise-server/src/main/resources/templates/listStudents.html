@@ -1,26 +1,26 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="pl">
-<head>
-  <title>Uczniowie</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-</head>
-<body>
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <h1> Uczniowie </h1>
+  <head>
+    <title>Uczniowie</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1> Uczniowie </h1>
+        </div>
+      </div>
+      <div class="row" th:each="student : ${students}">
+        <div class="col-md-3"><span th:text="${student.email}"> Email </span></div>
+        <div class="col-md-3"><span th:text="${student.name}"> Name </span></div>
+        <div class="col-md-3"><span th:text="${student.surname}"> Surname </span></div>
+        <div class="col-md-2"><span th:text="${student.proposedNote}"> Proposed note </span></div>
+        <div class="col-md-1">
+          <!--
+          <a class="btn btn-danger" href="#" th:href="@{/delete/{email}(email=${student.email})}">Delete</a>
+          -->
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="row" th:each="student : ${students}">
-    <div class="col-md-3"><span th:text="${student.email}"> Email </span></div>
-    <div class="col-md-3"><span th:text="${student.name}"> Name </span></div>
-    <div class="col-md-3"><span th:text="${student.surname}"> Surname </span></div>
-    <div class="col-md-2"><span th:text="${student.proposedNote}"> Proposed note </span></div>
-    <div class="col-md-1">
-      <!--
-      <a class="btn btn-danger" href="#" th:href="@{/delete/{email}(email=${student.email})}">Delete</a>
-      -->
-    </div>
-  </div>
-</div>
-</body>
+  </body>
 </html>

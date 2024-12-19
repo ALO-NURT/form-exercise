@@ -5,12 +5,14 @@ import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.*
 import pl.alonurt.formexcerciseserver.model.Student
+import pl.alonurt.formexcerciseserver.service.BankClientService
 import pl.alonurt.formexcerciseserver.service.StudentService
 
 @Controller
 @RequestMapping("/")
 data class ListingController(
-    val studentService: StudentService
+    val studentService: StudentService,
+    val bankClientService: BankClientService
 ) {
 
     @CrossOrigin
@@ -30,5 +32,11 @@ data class ListingController(
     fun deleteStudent(@PathVariable("email") email: String?): String {
         studentService.removeStudent(email!!)
         return "redirect:/list"
+    }
+
+    @GetMapping("bank_clients")
+    fun listBankClients(model: Model): String {
+        model.addAttribute("bankClients", bankClientService.getAllBankClients())
+        return "listBankClients"
     }
 }
